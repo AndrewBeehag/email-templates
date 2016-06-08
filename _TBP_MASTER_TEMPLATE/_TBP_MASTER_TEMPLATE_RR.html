@@ -1,0 +1,854 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <title>The Book People</title>
+   
+  <style type="text/css">
+  html{-webkit-text-size-adjust:none;}
+  html{-ms-text-size-adjust:100%;}
+  
+  body, p{margin: 0px; padding:0px;}
+  img{border: 0; -ms-interpolation-mode:bicubic; display:block;}v\:* {behavior: url(#default#VML); display:block;}
+
+  .ReadMsgBody {width: 100%;}
+  .ExternalClass{width: 100%}
+  .ExternalClass*{line-height: 100%;}
+  #outlook a{padding: 0;}
+  table {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: auto !important;}
+  .appleLinks a {color:#344d5d; text-decoration: none;}
+  
+  @media only screen and (max-width: 413px){ 
+
+    *[class].fl{float:left !important;}
+    *[class].fr{float:right !important;}
+    *[class].wr{display:block !important;}
+
+    *[class].h{display:none !important;}
+    *[class].s{display:block !important; mso-hide: none !important; max-height: 0 !important; overflow: visible !important; float: none !important; width: auto !important;}
+
+    *[class].autoh{height:auto !important;}
+    *[class].el{max-width: 250px !important;}
+    *[class].lh45{line-height: 45px !important;}
+    
+    *[class].h5{height:5px !important; font-size: 5px !important; line-height: 5px !important; border: initial !important} 
+    *[class].h10{height:10px !important; font-size: 10px !important; line-height: 10px !important;}
+    *[class].h15{height:15px !important;}
+    *[class].h45{height:45px !important;}     
+    *[class].h50{height:50px !important;}
+    *[class].h80{height:80px !important;}
+    *[class].h100{height:100px !important;}
+    *[class].h140{height:140px !important;}
+    *[class].h150{height:150px !important;}
+    *[class].w5{width:5px !important;}
+    *[class].w10{width:10px !important;}
+    *[class].w100{width:100px !important;}
+    *[class].w135{width:135px !important;}
+    *[class].w140{width:140px !important;}
+    *[class].w145{width:145px !important;}
+    *[class].w150{width:150px !important;}
+    *[class].w155{width:155px !important;}
+    *[class].w160{width:160px !important;}
+    *[class].w170{width:170px !important;}
+    *[class].w270{width:270px !important;}
+    *[class].w300{width:300px !important;}
+    *[class].w310{width:310px !important;}
+    *[class].w315{width:315px !important;}
+    *[class].w320{width:320px !important;}
+
+    *[class].tr{text-align: right !important;}
+    *[class].tc{text-align: center !important;}
+    *[class].tl{text-align: left !important;}
+
+    *[class].ac{margin-left:auto !important; margin-right:auto !important;}
+
+    *[class].sStrap{height: 50px !important; width: 180px !important; background-image: url("https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/tbp-strapline-mobile-15-08-28.jpg") !important; background-repeat: no-repeat !important; background-color: #ffffff !important; background-size: 100% 100% !important; background-position: center;}
+
+    *[class].sMain{height: 480px !important; width: 320px !important; background-image: url("https://storage.googleapis.com/tbpstatic/tbpemail/tbp/program/TBP_Prog_Abandoned_Basket/images/TBP_Prog_Abandoned_Basket_Mobile.jpg") !important; background-repeat: no-repeat !important; background-color: #a3d4cf !important;} 
+
+    *[class].footer-link{text-align: left !important; border-bottom: 1px solid #cccccc !important; height: 44px !important; width: 320px !important; background-image: url("https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/50x44_redArrow_15_08_03.jpg") !important; background-repeat: no-repeat !important; background-position: 270px !important;}
+    *[class].footer-link-grey{text-align: left !important; border-bottom: 1px solid #cccccc !important; height: 44px !important; width: 320px !important; background-image: url("https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2014/images/50x44_blueArrow.png") !important; background-repeat: no-repeat !important; background-position: 270px !important;} 
+
+
+  }
+   </style>
+   <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+   <meta content="telephone=no" name="format-detection" />
+   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+  <body style="background-color: #e0e0e0">
+    <div style="background-color: #e0e0e0">
+      
+      <#setting url_escaping_charset='ISO-8859-1'>
+      <#setting date_format='yyyy-MM-dd'>
+      <#assign v_cpi=campaign.name?url>
+
+      <#assign v_date=.now?date>
+
+      <#if TheBookPeople_List.COMMERCE_ID == "empty">
+
+        <#if TheBookPeople_List.CUSTOMER_ID_ == "empty">
+
+          <#assign v_userId=TheBookPeople_List.RIID_>
+
+        <#else>
+
+          <#assign v_userId=TheBookPeople_List.CUSTOMER_ID_>
+
+        </#if>
+
+      <#else>
+
+          <#assign v_userId=TheBookPeople_List.COMMERCE_ID>
+      
+      </#if>
+
+      <#assign v_zoneName='andrew'>
+      <#assign v_seedProductIds=''>
+      <#assign v_seedCategoryIds=''>
+      <#assign v_strategySet=''>
+
+      <#import "config.txt" as config>
+      
+      <#assign v_placementCount = 0>
+      <#assign v_desktopLinkCount = 1>
+      <#assign v_mobileLinkCount = 1>
+
+      <!-- Start of Header -->
+      <!-- Start of Pre-header -->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320 h" width="660">
+        <tbody>
+          <tr>
+            <td>
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" width="640">
+                <tbody>
+                  <tr>
+                    <td height="30">
+                      <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_home_tbp?storeId=10001&catalogId=10051&langId=100" rilt="Subject_Line" style="font-family: arial, helvetica, sans-serif; color: #344d5d; font-size: 12px; text-decoration: none" target="_blank">Subject line</a>
+                    </td>
+                    <td height="30" style="text-align: right">
+                      <a href="${form(campaign.name)}" rilt="View_With_Images" style="text-align: right; line-height: 30px; font-family: arial, helvetica, sans-serif; color: #344d5d; font-size: 12px; text-decoration: none" target="_blank">View with images</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- End of Pre-header -->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" style="webkit-box-shadow: 0px 3px 3px 0px #bdbdbd; -moz-box-shadow: 0px 3px 3px 0px #bdbdbd; box-shadow: 0px 3px 3px 0px #bdbdbd;" width="660">
+        <tbody>
+          <tr>
+             <td>              
+              <!-- Start of Masthead -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" style="border-top: 3px solid #ed1c24; text-align: left" width="660">
+                 <tbody>
+                    <tr>
+                       <td>
+                       <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" width="640">
+                          <tbody>
+                             <tr>
+                                <td class="h10" height="12" style="line-height: 12px; font-size: 12px"></td>
+                             </tr>
+                             <tr>
+                                <td>
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" width="630">
+                                   <tbody>
+                                      <tr class="wr fl">
+                                         <th class="wr fl w320" style="font-weight: normal;">
+                                            <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_home_tbp?storeId=10001&catalogId=10051&langId=100" rilt="Logo" style="text-decoration: none" target="_blank">
+                                               <img alt="BookPeople.co.uk" border="0" class="ac" height="40" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/tbp-logo-15-08-28.jpg" style="font-family: arial, helvetica, sans-serif; display: block; color: #ed1c24; font-size: 20px; line-height: 40px;" width="200" />
+                                            </a>
+                                         </th>
+                                         <th class="h" style="font-weight: normal;">
+                                            <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_home_tbp?storeId=10001&catalogId=10051&langId=100" rilt="Strap_Line" style="text-decoration: none" target="_blank">
+                                               <img alt="Hand-picked favourites at unbelievable prices" border="0" height="40" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/tbp-strapline-15-08-28.jpg" style="font-family: arial, helvetica, sans-serif; text-align: right; margin-left: auto; display: block; color: #ed1c24; font-size: 16px; line-height: 40px;" width="380" />
+                                            </a>
+                                         </th>
+                                         <th class="wr fl w320">
+                                            <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_home_tbp?storeId=10001&catalogId=10051&langId=100" rilt="Strap_Line_Mobile" target="_blank">
+                                               <!-- Hidden Header Mobile image -->
+                                               <img alt="" border="0" class="sStrap ac" height="1" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2014/images/spacer.gif" style="display:block;" width="1" />
+                                               <!-- End of Hidden Header Mobile image --> 
+                                            </a>
+                                         </th>
+                                      </tr>
+                                   </tbody>
+                                </table>
+                                </td>
+                             </tr>
+                             <tr>
+                                <td class="h10" height="15" style="line-height: 15px; font-size: 15px"></td>
+                             </tr>
+                          </tbody>
+                       </table>
+                       </td>
+                    </tr>
+                 </tbody>
+              </table>
+              <!-- End of Masthead -->
+              <!-- Start of Top Nav -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320 h" style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;" width="660">
+                 <tbody>
+                    <tr>
+                       <td height="43" valign="top">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" style="text-align: center;" width="580">
+                             <tbody>
+                                <tr>
+                                   <td height="43">
+                                      <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=85207" rilt="Header_Childrens_Books" style="font-family: Arial, Helvetica, Verdana, sans-serif; color: #000000; font-size: 16px; text-decoration: none; text-align: center; line-height: 43px;" target="blank">Children&rsquo;s&nbsp;Books&nbsp;&nbsp;
+                                      </a>
+                                   </td>
+                                   <td height="43">
+                                   <table border="0" cellpadding="0" cellspacing="0" width="1">
+                                      <tbody>
+                                         <tr>
+                                            <td bgcolor="#cccccc" height="30" style="line-height: 1px; font-size: 1px" width="1"></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </td>
+                                   <td height="43">
+                                      <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=48122" rilt="Header_Fiction" style="font-family: Arial, Helvetica, Verdana, sans-serif; color: #000000; font-size: 16px; text-decoration: none; text-align: center; line-height: 43px;" target="blank">&nbsp;&nbsp;Fiction&nbsp;&nbsp;</a>
+                                   </td>
+                                   <td height="43">
+                                   <table border="0" cellpadding="0" cellspacing="0" width="1">
+                                      <tbody>
+                                         <tr>
+                                            <td bgcolor="#cccccc" height="30" style="line-height: 1px; font-size: 1px" width="1"></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </td>
+                                   <td height="43">
+                                      <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=133711" rilt="Header_Non_Ficton" style="font-family: Arial, Helvetica, Verdana, sans-serif; color: #000000; font-size: 16px; text-decoration: none; text-align: center; line-height: 43px;" target="blank">&nbsp;&nbsp;Non-Fiction&nbsp;&nbsp;</a>
+                                   </td>
+                                   <td height="43">
+                                   <table border="0" cellpadding="0" cellspacing="0" width="1">
+                                      <tbody>
+                                         <tr>
+                                            <td bgcolor="#cccccc" height="30" style="line-height: 1px; font-size: 1px" width="1"></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </td>
+                                   <td height="43">
+                                      <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=116707" rilt="Header_Collections" style="font-family: Arial, Helvetica, Verdana, sans-serif; color: #000000; font-size: 16px; text-decoration: none; text-align: center; line-height: 43px;" target="blank">&nbsp;&nbsp;Collections&nbsp;&nbsp;</a>
+                                   </td>
+                                </tr>
+                             </tbody>
+                          </table>
+                       </td>
+                    </tr>
+                 </tbody>
+              </table>
+              <!-- End of Top Nav -->
+              <!-- End of Header -->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Blank Data -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="660">
+                <tbody>
+                  <tr>
+                    <td height="10" style="font-size: 10px; line-height: 10px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End of Blank Data-->
+              <!-- Start of Footer -->
+              <!-- Start of Module 6 -->
+              <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" style="text-align: left" width="660">
+                <tbody>
+                  <tr>
+                    <td>
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" width="640">
+                        <tbody>
+                          <tr>
+                            <td class="h5" height="10" style="font-size: 10px; line-height: 10px; border-top: 1px #cccccc solid"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" class="w315" width="640">
+                        <tbody>
+                            <tr>
+                              <td>
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="w315" width="640">
+                                  <tbody>
+                                    <tr class="wr fl">
+                                      <th class="wr fl" height="90" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; font-weight: normal" width="315">
+                                        <a rilt="Footer_Banner_Recommend" target="_blank" style="text-decoration: none;" href="https://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/browse_emailReferral?storeId=10001&langId=100">
+                                          <img src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/sale/FooterBanners/images/315x90-RecommendAFriend.jpg" height="90" width="315" alt="Recommend Book People to a friend and you&rsquo;ll each receive an exclusive offer. &rsaquo;" style="display:block; font-family:Arial, Helvetica, sans-serif; font-size: 14px; color: #ffffff; background-color: #953d91; line-height: 20px;" />
+                                        </a>
+                                      </th>
+                                      <th class="wr fl h10 w315" height="90" width="10"></th>
+                                      <th class="wr fl" height="90" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; font-weight: normal" width="315">
+
+                                        <#assign v_random = rand(3)?round>
+
+                                        <#if v_random == 0>
+                                        <a rilt="Footer_Banner_Facebook" target="_blank" style="text-decoration: none" href="https://www.facebook.com/TheBookPeopleLtd">
+                                          <img src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/sale/FooterBanners/images/315x90-Facebook.jpg" style="display:block; font-family:Arial, Helvetica, sans-serif; font-size: 14px; color: #3460a1; background-color: #a7e5fc; line-height: 20px;" height="90" width="315" alt="Join the chat, visit us on Facebook &rasquo;" />
+                                        </a>
+                                        <#elseif v_random == 1>
+                                        <a rilt="Footer_Banner_Blog" target="_blank" style="text-decoration: none;" href="http://www.thebookpeople.co.uk/blog">
+                                          <img src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/sale/FooterBanners/images/315x90-Blog.jpg" height="90" width="315" border="0" style="font-weight: normal; display: block; font-family: arial, helvetica, sans-serif; color: #d62c27; font-size: 14px; line-height: 20px; background-color: #f4cfcf" alt="Read the latest news and views from Book People &rsaquo;" />
+                                        </a>
+                                        <#elseif v_random == 2>
+                                        <a rilt="Footer_Banner_Twitter" target="_blank" style="text-decoration: none" href="http://www.twitter.com/TheBookPeople">
+                                          <img src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/sale/FooterBanners/images/315x90-Twitter.jpg" height="90" width="315" style="display:block; font-family:Arial, Helvetica, sans-serif; font-size: 14px; color: #28aae1; background-color: #a7e5fc; line-height: 20px;" alt="Follow us @TheBookPeople for the latest book news and competitions &rsaquo;" />
+                                        </a>
+                                        <#elseif v_random == 3>
+                                        <a rilt="Footer_Banner_Instagram" target="_blank" style="text-decoration: none;" href="https://instagram.com/thebookpeople">
+                                          <img src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/sale/FooterBanners/images/315x90-Instagram.jpg" height="90" width="315" border="0" style="font-weight: normal; display: block; font-family: arial, helvetica, sans-serif; color: #276f92; font-size: 14px; line-height: 20px; background-color: #a7e5fc;" alt="Did you know we&rsquo;on Instagram &rsaquo;" />
+                                        </a>
+                                        </#if>
+                                      </th>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End of Module 6 -->
+                <!-- Start of Module 6 -->
+                 <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" style="text-align: left;" width="660">
+                    <tbody>
+                       <tr>
+                          <td>
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" width="640">
+                             <tbody>
+                                <tr>
+                                   <td class="h5" height="10" style="font-size: 10px; line-height: 10px;"></td>
+                                </tr>
+                             </tbody>
+                          </table>
+                          </td>
+                       </tr>
+                       <tr>
+                          <td>
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" class="w315" width="640">
+                             <tbody>
+                                <tr class="wr fl">
+                                   <th class="wr fl w320" style="font-weight: normal; text-align: left;" valign="top" width="315">
+                                   <table align="center" border="0" cellpadding="0" cellspacing="0" class="w300" width="310">
+                                      <tbody>
+                                         <tr>
+                                            <td height="25">
+                                              <em style="font-family: arial, helvetica, sans-serif; font-size: 14px; color: #ed1c24; line-height: 20px;"><strong>We promise to...</strong></em>
+                                            </td>
+                                         </tr>
+                                         <tr>
+                                            <td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; font-weight: normal">
+
+                                              <#assign v_random = rand(4)?round>
+
+                                              <#if v_random == 0>
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td width="60" height="60">
+                                                        <a rilt="Promise_30_Day_Image" target="_blank" style="text-decoration: none; color: #666666" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          <img width="60" height="60" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/icon-calendar.png" alt="" />
+                                                        </a>
+                                                      </td>
+                                                      <td width="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
+                                                      <td valign="top" style="font-family: arial, helvetica, sans-serif; text-decoration: none; font-size: 13px; line-height: 18px; color: #000000">
+                                                        <a rilt="Promise_30_Day_Text" target="_blank" style="text-decoration: none; color: #000000" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          Put our money where our mouth is, with our <strong>30-day money-back guarantee</strong>
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              <#elseif v_random == 1>
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%"> 
+                                                  <tbody>
+                                                    <tr>
+                                                      <td width="60" height="60">
+                                                        <a rilt="Promise_Friendly_Advice_Image" target="_blank" style="text-decoration: none; color: #666666" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          <img width="60" height="60" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/icon-face.png" alt="" />
+                                                        </a>
+                                                      </td>
+                                                      <td width="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
+                                                      <td valign="top" style="font-family: arial, helvetica, sans-serif; text-decoration: none; font-size: 13px; line-height: 18px; color: #000000">
+                                                        <a rilt="Promise_Friendly_Advice_Text" target="_blank" style="text-decoration: none; color: #000000" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          Have our <strong>friendly and knowledgeable team on hand</strong> to offer help and advice whenever you need it
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              <#elseif v_random == 2>
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%"> 
+                                                  <tbody>
+                                                    <tr>
+                                                      <td width="60" height="60">
+                                                        <a rilt="Promise_25_Years_Image" target="_blank" style="text-decoration: none; color: #666666" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          <img width="60" height="60" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/icon-25-years.png" alt="" />
+                                                        </a>
+                                                      </td>
+                                                      <td width="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
+                                                      <td valign="top" style="font-family: arial, helvetica, sans-serif; text-decoration: none; font-size: 13px; line-height: 18px; color: #000000">
+                                                        <a rilt="Promise_25_Years_Text" target="_blank" style="text-decoration: none; color: #000000" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          <strong>Pass our savings on to you,</strong> as we have done <strong>for 25 years</strong>
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              <#elseif v_random == 3>
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%"> 
+                                                  <tbody>
+                                                    <tr>
+                                                      <td width="60" height="60">
+                                                        <a rilt="Promise_Big_Savings_Images" target="_blank" style="text-decoration: none; color: #666666" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          <img width="60" height="60" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/icon-pig-savings.png" alt="" />
+                                                        </a>
+                                                      </td>
+                                                      <td width="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
+                                                      <td valign="top" style="font-family: arial, helvetica, sans-serif; text-decoration: none; font-size: 13px; line-height: 18px; color: #000000">
+                                                        <a rilt="Promise_Big_Savings_Text" target="_blank" style="text-decoration: none; color: #000000" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          Bring you <strong>savings up to 75% off RRP</strong> on 1,000s of favourites
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              <#elseif v_random == 4>
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td width="60" height="60">
+                                                        <a rilt="Promise_Range_Images" target="_blank" style="text-decoration: none; color: #666666" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          <img width="60" height="60" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/icon-present.png" alt="" />
+                                                        </a>
+                                                      </td>
+                                                      <td width="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
+                                                      <td valign="top" style="font-family: arial, helvetica, sans-serif; text-decoration: none; font-size: 13px; line-height: 18px; color: #000000">
+                                                        <a rilt="Promise_Range_Text" target="_blank" style="text-decoration: none; color: #000000" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=BookPeoplePromise">
+                                                          Offer you an <strong>extensive range</strong> of over 100,000 books, gifts, toys and stationery
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </#if>
+                                            </td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </th>
+                                   <th class="wr fl w320" style="font-weight: normal; text-align: left;" valign="top" width="315">
+                                   <table align="center" border="0" cellpadding="0" cellspacing="0" class="w300" width="300">
+                                      <tbody>
+                                         <tr>
+                                            <td height="25"><em style="font-family: arial, helvetica, sans-serif; font-size: 14px; color: #ed1c24; line-height: 20px;"><strong>What is a...</strong></em></td>
+                                         </tr>
+                                         <tr>
+                                            <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                               <tbody>
+                                                  <tr>
+                                                     <td><a href="http://www.thebookpeople.co.uk/blog/index.php/2015/10/19/book-peoples-hand-picked-favourites" rilt="Footer_What_Is_A_Handpicked_Favourite_Icon" target="_Blank"><img alt="" border="0" height="60" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/hand-picked-favourite.png" style="display: block;" width="60" /> </a></td>
+                                                     <td>
+                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                           <tr>
+                                                              <td height="40" width="240"><a href="http://www.thebookpeople.co.uk/blog/index.php/2015/10/19/book-peoples-hand-picked-favourites" rilt="Footer_What_Is_A_Handpicked_Favourite" target="_Blank"><img alt="" border="0" height="40" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/240x40-hand-picked-favourite.jpg" style="display: block;" width="240" /> </a></td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td height="20" width="240"><a href="http://www.thebookpeople.co.uk/blog/index.php/2015/10/19/book-peoples-hand-picked-favourites" rilt="Footer_What_Is_A_Handpicked_Favourite" style="display: block; width: 100%; font-family: arial, helvetica, sans-serif; color: #00aeef; font-size: 13px; text-decoration: none; line-height: 20px;" target="_Blank">Find out more &rsaquo;</a></td>
+                                                           </tr>
+                                                        </tbody>
+                                                     </table>
+                                                     </td>
+                                                  </tr>
+                                               </tbody>
+                                            </table>
+                                            </td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </th>
+                                </tr>
+                             </tbody>
+                          </table>
+                          </td>
+                       </tr>
+                       <tr>
+                          <td>
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" width="640">
+                             <tbody>
+                                <tr>
+                                   <td class="h5" height="10" style="font-size: 10px; line-height: 10px;"></td>
+                                </tr>
+                             </tbody>
+                          </table>
+                          </td>
+                       </tr>
+                    </tbody>
+                 </table>
+                 <!-- End of Module 6 -->
+                 <!-- Start of Footer -->
+                 <!-- Start of Footer Nav -->
+                <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" style="border-top: 3px #ed1c24 solid;" width="660">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320" style="text-align: center;">
+                          <tbody>
+                            <tr class="wr fl">
+                              <th class="wl fl footer-link" height="44" style="font-weight: normal">
+                                <a href="$clickthrough('http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay', 'storeId=10001', 'catalogId=10051', 'langId=100', 'categoryId=85207')$" rilt="Footer_Childrens_Books" style="display: block; width: 100%; font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #000000; font-size: 16px; text-decoration: none; line-height: 44px;" target="_blank">
+                                  &nbsp;&nbsp;&nbsp;Children&rsquo;s&nbsp;Books&nbsp;&nbsp;
+                                </a>
+                              </th>
+                              <th class="h" height="44">
+                                <table border="0" cellpadding="0" cellspacing="0" width="1">
+                                  <tbody>
+                                    <tr>
+                                      <td bgcolor="#cccccc" height="20" style="line-height: 1px; font-size: 1px" width="1"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </th>
+                              <th class="wr fl footer-link" height="44" style="font-weight: normal">
+                                <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=48122" rilt="Footer_Fiction" style="display: block; width: 100%; font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #000000; font-size: 16px; text-decoration: none; line-height: 44px;" target="_blank">
+                                  &nbsp;&nbsp;&nbsp;Fiction&nbsp;&nbsp;
+                                </a>
+                              </th>
+                              <th class="h" height="44">
+                                <table border="0" cellpadding="0" cellspacing="0" width="1">
+                                  <tbody>
+                                    <tr>
+                                      <td bgcolor="#cccccc" height="20" style="line-height: 1px; font-size: 1px" width="1">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                   </th>
+                                   <th class="wr fl footer-link" height="44" style="font-weight: normal"><a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=133711" rilt="Footer_Non_Fiction" style="display: block; width: 100%; font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #000000; font-size: 16px; text-decoration: none; line-height: 44px;" target="_blank">&nbsp;&nbsp;&nbsp;Non-Fiction&nbsp;&nbsp; </a></th>
+                                   <th class="h" height="44">
+                                   <table border="0" cellpadding="0" cellspacing="0" width="1">
+                                      <tbody>
+                                         <tr>
+                                            <td bgcolor="#cccccc" height="20" style="line-height: 1px; font-size: 1px" width="1"></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </th>
+                                   <th class="wr fl footer-link" height="44" style="font-weight: normal"><a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=116707" rilt="Footer_Collections" style="display: block; width: 100%; font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #000000; font-size: 16px; text-decoration: none; line-height: 44px;" target="_blank">&nbsp;&nbsp;&nbsp;Collections&nbsp;&nbsp;&nbsp; </a></th>
+                                   <th class="h" height="44">
+                                   <table border="0" cellpadding="0" cellspacing="0" width="1">
+                                      <tbody>
+                                         <tr>
+                                            <td bgcolor="#cccccc" height="20" style="line-height: 1px; font-size: 1px" width="1"></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </th>
+                                   <th class="wr fl h" height="44" style="font-weight: normal"><a class="h" href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=10003" rilt="Footer_Bestsellers" style="display: block; width: 100%; font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #000000; font-size: 16px; text-decoration: none" target="_blank">&nbsp;&nbsp;&nbsp;Bestsellers&nbsp;&nbsp;&nbsp; </a></th>
+                                </tr>
+                             </tbody>
+                          </table>
+                          </td>
+                       </tr>
+                    </tbody>
+                 </table>
+                 <!-- End of Footer Nav -->
+                 <!-- Start of Social Media -->
+                 <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" style="text-align: left" width="660">
+                    <tbody>
+                       <tr class="wr fl">
+                          <th class="wr fl h5 w320"></th>
+                          <th class="wr fl">
+                          <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="w320" width="640">
+                             <tbody>
+                                <tr class="wr fl">
+                                   <th class="wr fl w320" style="font-weight: normal" valign="top">
+                                   <table align="center" border="0" cellpadding="0" cellspacing="0" class="w300" width="310">
+                                      <tbody>
+                                         <tr>
+                                            <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                               <tbody>
+                                                  <tr>
+                                                     <td height="60" width="60"><a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=wl_helpDeliveryOptions&storeId=10001&langId=100" rilt="Footer_Free_UK_Delivery_Van_Icon" target="_blank"><img alt="" height="60" src="https://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2015/images/icon-color-van.png" width="60" /> </a></td>
+                                                     <td style="font-size: 10px; line-height: 10px;" width="10"></td>
+                                                    <td>
+                                                      <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=wl_helpDeliveryOptions&storeId=10001&langId=100" rilt="Footer_Free_UK_Delivery" style="font-family: arial, helvetica, sans-serif; text-decoration: none; font-size: 16px; color: #ed1c24; width: 100%; display: block; line-height: 20px;" target="_blank">
+                                                        <span>Free UK delivery</span><br />
+                                                        <span style="font-family: arial, helvetica, sans-serif; color:#000000; font-size: 14px;">on all orders <strong>over &pound;25</strong></span>
+                                                      </a>
+                                                    </td>
+                                                  </tr>
+                                               </tbody>
+                                            </table>
+                                            </td>
+                                         </tr>
+                                         <tr>
+                                            <td class="h5" height="10" style="font-size: 10px; line-height: 10px;"></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </th>
+                                   <th class="wr fl w320" style="font-weight: normal">
+                                   <table align="right" border="0" cellpadding="0" cellspacing="0" class="w320" width="310">
+                                      <tbody>
+                                         <tr>
+                                            <td>
+                                            <table align="right" border="0" cellpadding="0" cellspacing="0" class="w320">
+                                               <tbody>
+                                                  <tr>
+                                                     <td>
+                                                     <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                           <tr>
+                                                              <td height="45" width="45">
+                                                                <a href="http://www.facebook.com/TheBookPeopleLtd" rilt="Footer_Facebook_Icon" style="text-decoration: none;" target="_blank">
+                                                                  <img alt="Facebook" border="0" height="45" src="http://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2014/images/45x45_facebookIcon.jpg" style="text-align: center; font-size: 13px; line-height: 45px; display: block; font-family: arial, helvetica, sans-serif; color: #37619e; text-decoration: none; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;" width="45" />
+                                                                </a>
+                                                              </td>
+                                                              <td height="45" width="45">
+                                                                <a href="http://www.twitter.com/TheBookPeople" rilt="Footer_Twitter_Icon" style="text-decoration: none;" target="_blank">
+                                                                  <img alt="Twitter" border="0" height="45" src="http://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2014/images/45x45_twitterIcon.jpg" style="text-align: center; line-height: 45px; display: block; font-family: arial, helvetica, sans-serif; color: #2dabdf; font-size: 13px; text-decoration: none; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;" width="45" />
+                                                                </a>
+                                                              </td>
+                                                              <td height="45" width="45">
+                                                                <a href="http://www.youtube.com/channel/UC_08X9DHc8RSHCs_w5nwp7Q?sub_confirmation=1" rilt="Footer_You_Tube_Icon" style="text-decoration: none;" target="_blank">
+                                                                  <img alt="You Tube" border="0" height="45" src="http://storage.googleapis.com/tbpstatic/tbpemail/tbp/templateStructure/2014/images/45x45_youTubeIcon.jpg" style="text-align: center; line-height: 45px; display: block; font-family: arial, helvetica, sans-serif; color: #ec353e; font-size: 13px; text-decoration: none; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;" width="45" />
+                                                                </a>
+                                                              </td>
+                                                           </tr>
+                                                        </tbody>
+                                                     </table>
+                                                     </td>
+                                                  </tr>
+                                               </tbody>
+                                            </table>
+                                            </td>
+                                         </tr>
+                                         <tr>
+                                            <td class="h" height="10" style="font-size: 10px; line-height: 10px;"></td>
+                                         </tr>
+                                      </tbody>
+                                   </table>
+                                   </th>
+                                </tr>
+                             </tbody>
+                          </table>
+                          </th>
+                          <th class="wr fl h5 w320"></th>
+                       </tr>
+                    </tbody>
+                 </table>
+                 <!-- End of Footer -->              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Start of Grey Footer -->
+      <!-- Start of Grey Nav -->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" class="w320">
+        <tbody>
+          <tr class="wl fl">
+            <th class="wl fl footer-link-grey" height="44" style="font-weight: normal">
+              <a href="${form('TBP_Preference_2015')}" rilt="Footer_Preferences" style="font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #344d5d; font-size: 14px; text-decoration: none; display: block; width: 100%; line-height: 44px;" target="_blank">&nbsp;&nbsp;Preferences&nbsp;&nbsp;</a>
+            </th>
+            <th class="h">
+              <table border="0" cellpadding="0" cellspacing="0" width="1">
+                 <tbody>
+                    <tr>
+                       <td bgcolor="#344d5d" height="20" style="line-height: 1px; font-size: 1px" width="1"></td>
+                    </tr>
+                 </tbody>
+              </table>
+            </th>
+            <th class="wl fl footer-link-grey" height="44" style="font-weight: normal">
+              <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/help_topic?topic=termsConditions&storeId=10001&langId=100" rilt="Footer_Terms_And_Conditions" style="font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #344d5d; font-size: 14px; text-decoration: none; display: block; width: 100%; line-height: 44px;" target="_blank">&nbsp;&nbsp;Terms&nbsp;&amp;&nbsp;Conditions&nbsp;&nbsp;</a>
+            </th>
+            <th class="h">
+              <table border="0" cellpadding="0" cellspacing="0" width="1">
+                 <tbody>
+                    <tr>
+                       <td bgcolor="#344d5d" height="20" style="line-height: 1px; font-size: 1px" width="1"></td>
+                    </tr>
+                 </tbody>
+              </table>
+            </th>
+            <th class="wl fl footer-link-grey" height="44" style="font-weight: normal">
+              <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/help_topic?topic=policyPrivacy&storeId=10001&langId=100" rilt="Footer_Privacy_Policy" style="font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #344d5d; font-size: 14px; text-decoration: none; display: block; width: 100%; line-height: 44px;" target="_blank">&nbsp;&nbsp;Privacy&nbsp;Policy&nbsp;&nbsp;</a>
+            </th>
+            <th class="h">
+              <table border="0" cellpadding="0" cellspacing="0" width="1">
+                 <tbody>
+                    <tr>
+                       <td bgcolor="#344d5d" height="20" style="line-height: 1px; font-size: 1px" width="1"></td>
+                    </tr>
+                 </tbody>
+              </table>
+            </th>
+            <th class="wl fl footer-link-grey" height="44" style="font-weight: normal">
+              <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/help_topic?topic=contact&storeId=10001&langId=100" rilt="Footer_Contact_Us" style="font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #344d5d; font-size: 14px; text-decoration: none; display: block; width: 100%; line-height: 44px;" target="_blank">&nbsp;&nbsp;Contact&nbsp;Us&nbsp;&nbsp;</a>
+            </th>
+            <th class="h">
+              <table border="0" cellpadding="0" cellspacing="0" width="1">
+                 <tbody>
+                    <tr>
+                       <td bgcolor="#344d5d" height="20" style="line-height: 1px; font-size: 1px" width="1"></td>
+                    </tr>
+                 </tbody>
+              </table>
+            </th>
+            <th class="h" height="44" style="font-weight: normal">
+              <a href="http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/help_topic?topic=contact&storeId=10001&langId=100" rilt="Footer_Order_Line" style="font-family: arial, helvetica, sans-serif; white-space: nowrap; color: #344d5d; font-size: 14px; text-decoration: none" target="_blank">&nbsp;&nbsp;Order line: 0345 602 4040&nbsp;&nbsp; 
+              </a>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      <!-- End of Grey Nav -->
+      <!-- End of Grey Nav -->
+      <!-- Start of Grey Footer Text -->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" class="w310" width="660">
+         <tbody>
+            <tr class="wr fl">
+              <th class="wr fl h5 w310"></th>
+              <th class="wr fl w310" style="font-weight: normal; font-family: arial, helvetica, sans-serif; font-size: 10px; color:#344d5d; text-align: center; line-height: 16px;">
+                To ensure our newsletters reach you, please add <a rilt="Footer_Our_Email_Address" href="mailto:thebookpeople@emailbooks.co.uk" style="text-decoration: none; color:#344d5d;" target="_blank">thebookpeople@emailbooks.co.uk</a> to your safe list or address book.<br />
+                If you prefer not to receive any more information from us, you can <a rilt="Footer_Unsubscribe" href="${form('TBP_FORM_Unsubscribe_2015', {'usedb':true})}" style="color:#344d5d;" target="_blank">unsubscribe</a> at any time.<br />
+                <br />
+                You have received this email because you requested to be updated with our latest news, products and offers.<br />
+                You subscribed with the email address <a rilt="Footer_Customers_Email_Address" href="${TheBookPeople_List.EMAIL_ADDRESS_}" style="text-decoration: none; color:#344d5d;" target="_blank">${TheBookPeople_List.EMAIL_ADDRESS_}</a>.<br />
+                <br />
+                The Book People Limited is a company registered in England with the company number <span class="appleLinks">2290665</span>.<br />
+                Registered address: <span class="appleLinks">The Book People Limited, Catteshall Manor, Catteshall Lane, Godalming, Surrey, GU7 1UU</span>.<br />
+                VAT Number: <span class="appleLinks">664509028</span><br />
+                <br />
+                Note: This email was sent from a notification-only email address that cannot accept incoming email.<br />
+                <br />
+              </th>
+              <th class="wr fl h5 w310"></th>
+            </tr>
+         </tbody>
+      </table>
+      <!-- End of Grey Footer Text -->
+      <!-- Start of Terms and Conditions -->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" class="w310" width="660">
+         <tbody>
+            <tr class="wr fl">
+               <th class="wr fl h5 w310"></th>
+               <th class="wr fl w310" style="font-weight: normal; font-family: arial, helvetica, sans-serif; font-size: 10px; color:#344d5d; text-align: center; line-height: 16px;">
+                <!-- Terms and condition go Here --><strong>Terms and Conditions</strong><!-- End of Terms and conditions -->
+               </th>
+               <th class="wr fl h5 w310"></th>
+            </tr>
+            <tr class="wr fl">
+               <th class="wr fl h5 w310"></th>
+               <th class="wr fl w310" style="font-weight: normal; font-family: arial, helvetica, sans-serif; font-size: 10px; color:#344d5d; text-align: center; line-height: 10px;"></th>
+               <th class="wr fl h5 w310"></th>
+            </tr>
+         </tbody>
+      </table>
+      <!-- End of Terms and Conditions -->
+      <!-- End of Grey Footer -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+<#assign v_richValues = [{"v_zone" : "AdultBestsellers"}, {"v_zone" : "ChildrensBestsellers"}, {"v_zone" : "AdultBestsellers"}]>

@@ -1,0 +1,81 @@
+=================================================
+BookPeople.co.uk
+Hand-picked favourites at unbelievable prices
+=================================================
+
+*** HERO TEXT ***
+
+>> *** HERO CTA ***
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_home_tbp?storeId=10001&catalogId=10051&langId=100
+
+--------------------------------------------------
+
+>> Children's Books
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=85207
+
+>> Fiction
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=48122
+
+>> Non-Fiction
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=133711
+
+>> Collections
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=116707
+
+>> Bestsellers 
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=10003 
+
+--------------------------------------------------
+
+>> Recommend Book People to a friend and you'll each receive an exclusive offer?
+https://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/browse_emailReferral?storeId=10001&langId=100 
+
+>> Free UK delivery on all orders over £25 
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_content1_tbp?title=Help-Account&spotName=wl_helpDeliveryOptions&storeId=10001&langId=100 
+
+>> What is a Hand-picked favourite
+http://www.thebookpeople.co.uk/blog/index.php/2015/10/19/book-peoples-hand-picked-favourites 
+
+--------------------------------------------------
+
+>> Facebook 
+http://www.facebook.com/TheBookPeopleLtd 
+
+>> Twitter 
+http://www.twitter.com/TheBookPeople 
+
+>> You Tube 
+http://www.youtube.com/channel/UC_08X9DHc8RSHCs_w5nwp7Q?sub_confirmation=1 
+
+--------------------------------------------------
+
+>> Preferences
+${form('TBP_Preference_2015')}
+
+>> Terms & Conditions
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/help_topic?topic=termsConditions&storeId=10001&langId=100
+
+>> Privacy Policy
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/help_topic?topic=policyPrivacy&storeId=10001&langId=100
+
+>> Contact Us: Order line: 0345 602 4040
+http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/help_topic?topic=contact&storeId=10001&langId=100
+
+--------------------------------------------------
+
+To ensure our newsletters reach you, please add thebookpeople@emailbooks.co.uk to your safe list or address book. 
+
+>> If you prefer not to receive any more information from us, you can unsubscribe at any time.
+${form('TBP_FORM_Unsubscribe_2015', {'usedb':true})}
+
+You have received this email because you requested to be updated with our latest news, products and offers.
+
+You subscribed with the email address ${TheBookPeople_List.EMAIL_ADDRESS_}.
+
+The Book People Limited is a company registered in England with the company number 2290665.  Registered address: The Book People Limited, Catteshall Manor, Catteshall Lane, Godalming, Surrey, GU7 1UU.  VAT Number: 664509028  Note: This email was sent from a notification-only email address that cannot accept incoming email.
+
+** Terms and Conditions
+--------------------------------------------------
+
+*** Terms and Conditions ***
+Book People reserves the right to withdraw all offers at any time.
